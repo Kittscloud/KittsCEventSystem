@@ -29,9 +29,6 @@
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
-    <ItemGroup>
-      <None Include="Exmaple\NukeRunConfigExample.cs" />
-    </ItemGroup>
 	
 	<!-- NuGet Packages -->
     <ItemGroup>
