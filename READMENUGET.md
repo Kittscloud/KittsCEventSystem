@@ -1,21 +1,12 @@
 # KittsCEventSystem
 *LabAPI Custom Events Framework*
 
-[![License](https://img.shields.io/badge/License-AGPL%20v3.0-blue?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/blob/main/LICENSE)
-[![Downloads](https://img.shields.io/github/downloads/Kittscloud/KittsCEventSystem/total?style=for-the-badge)](https://github.com/Kittscloud/ServerSpecificsSyncer/releases/latest)
-[![GitHub release](https://img.shields.io/github/v/release/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/releases/latest)
-[![](https://img.shields.io/badge/.NET-4.8.1-512BD4?logo=dotnet&logoColor=fff&style=for-the-badge)](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
-[![GitHub stars](https://img.shields.io/github/stars/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/issues)
+[![License](https://img.shields.io/badge/License-AGPL%20v3.0-blue?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/blob/main/LICENSE) [![Downloads](https://img.shields.io/github/downloads/Kittscloud/KittsCEventSystem/total?style=for-the-badge)](https://github.com/Kittscloud/ServerSpecificsSyncer/releases/latest) [![GitHub release](https://img.shields.io/github/v/release/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/releases/latest) [![](https://img.shields.io/badge/.NET-4.8.1-512BD4?logo=dotnet&logoColor=fff&style=for-the-badge)](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481) [![GitHub stars](https://img.shields.io/github/stars/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/stargazers) [![GitHub issues](https://img.shields.io/github/issues/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/issues)
 
 `KittsCEventSystem` is a framework that makes adding event easy for `SCP Secret Laboratory` using `LabAPI`.
 
 ## Consider Supporting?
 If you enjoy this project and would like to support future development, I would greatly appreciate it if you considered donating via my [Ko-Fi](https://ko-fi.com/kittscloud).
-
-## NuGet Package
-The `NuGet Package` offers easy intergation of this tool. You can find the `NuGet Packages` here:
-- [KittsCEventSystem](https://www.nuget.org/packages/KittsCEventSystem)
 
 ## How to use KittsCEventSystem:
 To install `KittsCEventSystem` on your server, you will need:
