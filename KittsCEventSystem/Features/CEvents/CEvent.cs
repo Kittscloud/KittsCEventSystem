@@ -41,10 +41,10 @@ public abstract class CEvent : CustomEventsHandler
     /// </summary>
     /// <param name="args">Command arguments after eventId.</param>
     /// <param name="error">Displays the error to the executer.</param>
-    /// <returns>A new config instance or null to use default.</returns>
+    /// <returns>A new config instance or the default.</returns>
     public virtual CEventConfig CreateConfigFromArgs(ArraySegment<string> args, out string error)
     {
         error = null;
-        return null;
+        return Config;
     }
 }

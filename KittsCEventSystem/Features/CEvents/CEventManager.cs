@@ -1,6 +1,6 @@
 ﻿using InventorySystem.Items;
 using InventorySystem.Items.Pickups;
-using KittsCEventSystem.Exmaple;
+using KittsCEventSystem.Exmaples;
 using LabApi.Events.CustomHandlers;
 using LabApi.Features.Enums;
 using LabApi.Features.Wrappers;

@@ -7,7 +7,7 @@ using PlayerRoles;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace KittsCEventSystem.Exmaple;
+namespace KittsCEventSystem.Exmaples;
 
 internal class NukeRunExample : CEvent
 {

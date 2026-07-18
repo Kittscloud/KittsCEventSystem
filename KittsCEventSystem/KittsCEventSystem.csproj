@@ -21,11 +21,11 @@
     </PropertyGroup>
 
 	<!-- NuGet Definitions -->
-
 	<PropertyGroup>
 		<Title>Kitts Custom Event System</Title>
+		<Description>KittsCEventSystem is a framework that makes adding event easy for SCP Secret Laboratory using LabAPI.</Description>
 		<Authors>Kittscloud</Authors>
-		<Version>0.1.1</Version>
+		<Version>0.1.4</Version>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageReadmeFile>READMENUGET.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -35,8 +35,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="..\LICENSE"> <Pack>True</Pack><PackagePath>\</PackagePath> </None>
+	    <None Include="..\LICENSE"> <Pack>True</Pack><PackagePath>\</PackagePath> </None>
 		<None Include="..\READMENUGET.md"> <Pack>True</Pack><PackagePath>\</PackagePath> </None>
+		<None Include="..\README.md"> <Pack>True</Pack><PackagePath>\</PackagePath> </None>
+		<None Include="..\CHANGELOG.md"> <Pack>True</Pack><PackagePath>\</PackagePath> </None>
 	</ItemGroup>
 
     <!-- Release | x64 -->
@@ -51,16 +53,17 @@
 	
 	<!-- NuGet Packages -->
     <ItemGroup>
-		<PackageReference Include="Northwood.LabAPI" Version="1.1.5" />
-		<PackageReference Include="PolySharp" Version="1.15.0" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+		<PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3" PrivateAssets="all" />
+		<PackageReference Include="Northwood.LabAPI" Version="1.1.7" />
+		<PackageReference Include="PolySharp" Version="1.16.0" PrivateAssets="all" />
     </ItemGroup>
 	
 	<!-- References -->
-    <ItemGroup>
-        <Reference Include="Assembly-CSharp-firstpass" HintPath="..\..\Local Admin Server\SCPSL_Data\Managed\Assembly-CSharp-firstpass.dll" />
-		<Reference Include="Assembly-CSharp" HintPath="..\..\Local Admin Server\SCPSL_Data\Managed\Assembly-CSharp-Publicized.dll" />
-		<Reference Include="CommandSystem.Core" HintPath="..\..\Local Admin Server\SCPSL_Data\Managed\CommandSystem.Core.dll" />
-		<Reference Include="Mirror" HintPath="..\..\Local Admin Server\SCPSL_Data\Managed\Mirror-Publicized.dll" />
-		<Reference Include="UnityEngine.CoreModule" HintPath="..\..\Local Admin Server\SCPSL_Data\Managed\UnityEngine.CoreModule.dll" />
-    </ItemGroup>
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp-firstpass" HintPath="..\..\$Resources\Local Admin Server\SCPSL_Data\Managed\Assembly-CSharp-firstpass.dll" />
+		<Reference Include="Assembly-CSharp" HintPath="..\..\$Resources\Local Admin Server\SCPSL_Data\Managed\Assembly-CSharp.dll" Publicize="true" />
+		<Reference Include="CommandSystem.Core" HintPath="..\..\$Resources\Local Admin Server\SCPSL_Data\Managed\CommandSystem.Core.dll" />
+		<Reference Include="Mirror" HintPath="..\..\$Resources\Local Admin Server\SCPSL_Data\Managed\Mirror.dll" />
+		<Reference Include="UnityEngine.CoreModule" HintPath="..\..\$Resources\Local Admin Server\SCPSL_Data\Managed\UnityEngine.CoreModule.dll" />
+	</ItemGroup>
 </Project>

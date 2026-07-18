@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace KittsCEventSystem.Exmaple;
+namespace KittsCEventSystem.Exmaples;
 
 internal class NukeRunConfigExample : CEvent
 {
@@ -23,8 +23,8 @@ internal class NukeRunConfigExample : CEvent
     public override int Id { get; } = 2;
     public override int PlayersRequired { get; } = -1;
 
-    // First you must create you config of what you want to be dynamic
-    // In this case we will be making the amount of medkits and colas dynamic
+    // First you must create your config of what you want to be congifurable
+    // In this case we will be making the amount of medkits and colas congifurable
     // You config must also inherit the CEventConfig record
     public sealed record NukeRunConfig(
         int Medkits,
@@ -51,24 +51,24 @@ internal class NukeRunConfigExample : CEvent
         // And then you return the default config
         // How this function works, if you return an error message (not null) then it means there was an error running the command
         // If there was an error then it will display the usage and error and the event wont run
-        // It is important you include these checks such as making sure it has the right amount of args and that they're ints if using ints
+        // It is important you include these checks such as making sure it has the right amount of args and that they're the right type (ints in this case)
         // If you dont then you will most likely get errors
-        if (!int.TryParse(args.At(0), out int medkits))
+        if (!int.TryParse(args.At(0), out int medkits) || medkits < 0)
         {
-            error = "<color=red>Medkits must be an integer.</color>";
+            error = "<color=red>Medkits must be a positive integer.</color>";
             return Config;
         }
 
-        if (!int.TryParse(args.At(1), out int colas))
+        if (!int.TryParse(args.At(1), out int colas) || colas < 0)
         {
-            error = "<color=red>Colas must be an integer.</color>";
+            error = "<color=red>Colas must be a positive integer.</color>";
             return Config;
         }
 
-        // I would put a check in to make sure that there aren't more items than inventrory slots
-        // But you should understand the idea of CEventConfig
+        // I would put in another check making sure that there aren't more items than inventrory slots (8)
+        // But with this you should now understand the idea of CEventConfig
 
-        // If the arguments all check out then create a new config and return it
+        // If all checks are passed then create your new config and return it
         return new NukeRunConfig(medkits, colas);
     }
 
