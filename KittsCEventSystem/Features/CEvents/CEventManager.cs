@@ -91,7 +91,7 @@ public static class CEventManager
                     !t.IsInterface &&
                     t != typeof(CEvent) &&
                     !typeof(GlobalCEvent).IsAssignableFrom(t) &&
-                    (t != typeof(NukeRunExample) || KittsCEventSystem.Config.EnableExamples)
+                    (KittsCEventSystem.Config.EnableExamples || (t != typeof(NukeRunExample) && t != typeof(NukeRunConfigExample)))
                 )
                 .Select(t => Activator.CreateInstance(t) as CEvent)
                 .Where(e => e != null)
@@ -103,7 +103,7 @@ public static class CEventManager
                     !t.IsAbstract &&
                     !t.IsInterface &&
                     t != typeof(GlobalCEvent) &&
-                    (t != typeof(GlobalExample) || KittsCEventSystem.Config.EnableExamples)
+                    (KittsCEventSystem.Config.EnableExamples || t != typeof(GlobalExample))
                 )
                 .Select(t => Activator.CreateInstance(t) as GlobalCEvent)
                 .Where(e => e != null)
@@ -149,7 +149,11 @@ public static class CEventManager
     {
         try
         {
-            if (cEvent == null || !cEvent.RegisterEvent || ((cEvent.GetType() == typeof(NukeRunExample) || cEvent.GetType() == typeof(GlobalExample)) && !KittsCEventSystem.Config.EnableExamples))
+            if (cEvent == null || !cEvent.RegisterEvent ||
+                    ((cEvent.GetType() == typeof(NukeRunExample) ||
+                    cEvent.GetType() == typeof(NukeRunConfigExample) ||
+                    cEvent.GetType() == typeof(GlobalExample)) &&
+                    !KittsCEventSystem.Config.EnableExamples))
                 return;
 
             Log.Debug("CEventManager.Register", $"Loading CEvent {cEvent.Name}...");
@@ -276,7 +280,7 @@ public static class CEventManager
     public static void SwitchCEvent(CEvent @new)
     {
         UnregisterAllGlobalEvents();
-        CustomHandlersManager.UnregisterEventsHandler(CurrentCEvent);
+        if (CurrentCEvent != null) CustomHandlersManager.UnregisterEventsHandler(CurrentCEvent);
         CurrentCEvent = null;
 
         CurrentCEvent = @new;

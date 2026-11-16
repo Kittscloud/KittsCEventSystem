@@ -1,37 +1,27 @@
 # KittsCEventSystem
 *LabAPI Custom Events Framework*
 
-[![License](https://img.shields.io/badge/License-AGPL%20v3.0-blue?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/blob/main/LICENSE)
-[![Downloads](https://img.shields.io/github/downloads/Kittscloud/KittsCEventSystem/total?style=for-the-badge)](https://github.com/Kittscloud/ServerSpecificsSyncer/releases/latest)
-[![GitHub release](https://img.shields.io/github/v/release/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/releases/latest)
-[![](https://img.shields.io/badge/.NET-4.8.1-512BD4?logo=dotnet&logoColor=fff&style=for-the-badge)](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
-[![GitHub stars](https://img.shields.io/github/stars/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/issues)
+[![License](https://img.shields.io/badge/License-AGPL%20v3.0-blue?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/blob/main/LICENSE) [![Downloads](https://img.shields.io/github/downloads/Kittscloud/KittsCEventSystem/total?style=for-the-badge)](https://github.com/Kittscloud/ServerSpecificsSyncer/releases/latest) [![GitHub release](https://img.shields.io/github/v/release/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/releases/latest) [![](https://img.shields.io/badge/.NET-4.8.1-512BD4?logo=dotnet&logoColor=fff&style=for-the-badge)](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481) [![GitHub stars](https://img.shields.io/github/stars/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/stargazers) [![GitHub issues](https://img.shields.io/github/issues/Kittscloud/KittsCEventSystem?style=for-the-badge)](https://github.com/Kittscloud/KittsCEventSystem/issues)
 
 `KittsCEventSystem` is a framework that makes adding event easy for `SCP Secret Laboratory` using `LabAPI`.
 
 ## Consider Supporting?
-If you enjoy this project and would like to support future development, I would greatly appreciate it if you considered donating via my [Ko-Fi](https://ko-fi.com/kittscloud).
+If you enjoy this project and would like to support future development, I would greatly appreciate it if you considered donating via my [`Ko-Fi`](https://ko-fi.com/kittscloud).
 
-## NuGet Package
-The `NuGet Package` offers easy intergation of this tool. You can find the `NuGet Packages` here:
-- [KittsCEventSystem](https://www.nuget.org/packages/KittsCEventSystem)
+## Installation
+All required files can be found in the [`latest release`](https://github.com/Kittscloud/KittsCEventSystem/releases/latest).
 
-## How to use KittsCEventSystem:
-To install `KittsCEventSystem` on your server, you will need:
-- `KittsCEventSystem` latest version.
+**Required files**
+- `KittsCEventSystem.dll` (latest version)
 
-All of these files can be found in the [latest release](https://github.com/Kittscloud/KittsCEventSystem/releases/latest).
-
-Once you have these:
-- Place `KittsCEventSystem.dll` in the `plugins` folder.
+**Installation**
+- Place `KittsCEventSystem.dll` in your `plugins` folder.
 
 Run the server and you're set!
 
 ### Configurations:
 | Parameter                      | Type     | Description                                               | Default Value              |
 |--------------------------------|----------|-----------------------------------------------------------|----------------------------|
-| `IsEnabled`                    | `bool`   | Is plugin enabled.                                        | `true`                     |
 | `Debug`                        | `bool`   | Sends debug logs to console.                              | `false`                    |
 | `EnableExamples`               | `bool`   | Whether example menus in-built to the plugin are enabled. | `true`                     |
 | `ClearCEventQueuePermission`   | `string` | Permission for clear cevent queue command.                | `"kts.clearceventqueue"`   |
@@ -43,8 +33,6 @@ Run the server and you're set!
 
 ### Default YML Config File:
 ```yml
-# Is plugin enabled
-is_enabled: true
 # Sends debug logs to console
 debug: false
 # Whether in-built example events are enabled
@@ -64,7 +52,10 @@ view_c_event_queue: kts.viewqueuedcevent
 ```
 
 ### Want to use in your own project?
-To install in your project, simply reference the `KittsCEventSystem.dll` file, found in the [latest release](https://github.com/Kittscloud/KittsCEventSystem/releases/latest).
+To install in your project, simply reference the `KittsCEventSystem.dll` file, found in the [`latest release`](https://github.com/Kittscloud/KittsCEventSystem/releases/latest).
+
+Alternatively, you can use the `NuGet Package` which can be found here:
+- [`KittsCEventSystem`](https://www.nuget.org/packages/KittsCEventSystem)
 
 Create a new class inheriting the `CEvent` class.
 
@@ -124,7 +115,7 @@ Works the same as a `CEvent` however the parameters are already set and configs 
 | `PauseAllWaves()`                                 | `void`                        | Pauses all waves.                                                           |
 | `UnpauseAllWaves()`                               | `void`                        | Resets timers and unpauses all waves.                                       |
 
-You can look at the [Examples](https://github.com/Kittscloud/KittsCEventSystem/tree/main/KittsCEventSystem/Examples) folder to get a better idea of how to create a `CEvent`, `CEvent` with a config and a `GlobalCEvent`.
+You can look at the [`Examples`](https://github.com/Kittscloud/KittsCEventSystem/tree/main/KittsCEventSystem/Examples) folder to get a better idea of how to create a `CEvent`, `CEvent` with a config and a `GlobalCEvent`.
 
 When you enable your plugin, simply run:
 ```csharp

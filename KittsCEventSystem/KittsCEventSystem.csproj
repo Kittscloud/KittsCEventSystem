@@ -25,9 +25,9 @@
 		<Title>Kitts Custom Event System</Title>
 		<Description>KittsCEventSystem is a framework that makes adding event easy for SCP Secret Laboratory using LabAPI.</Description>
 		<Authors>Kittscloud</Authors>
-		<Version>0.1.4</Version>
+		<Version>0.1.5</Version>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<PackageReadmeFile>READMENUGET.md</PackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageTags>custom-events;event-system;server-events;scripting;gameplay-mods;game-server;SCP-SL;plugin;server-customization;triggers;game-events;modding;automation;event-handling;extensions;plugin-framework</PackageTags>
 		<RepositoryUrl>https://github.com/Kittscloud/KittsCEventSystem</RepositoryUrl>
@@ -36,7 +36,6 @@
 
 	<ItemGroup>
 	    <None Include="..\LICENSE"> <Pack>True</Pack><PackagePath>\</PackagePath> </None>
-		<None Include="..\READMENUGET.md"> <Pack>True</Pack><PackagePath>\</PackagePath> </None>
 		<None Include="..\README.md"> <Pack>True</Pack><PackagePath>\</PackagePath> </None>
 		<None Include="..\CHANGELOG.md"> <Pack>True</Pack><PackagePath>\</PackagePath> </None>
 	</ItemGroup>
@@ -55,7 +54,7 @@
     <ItemGroup>
 		<PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3" PrivateAssets="all" />
 		<PackageReference Include="Northwood.LabAPI" Version="1.1.7" />
-		<PackageReference Include="PolySharp" Version="1.16.0" PrivateAssets="all" />
+		<PackageReference Include="PolySharp" Version="1.17.1" PrivateAssets="all" />
     </ItemGroup>
 	
 	<!-- References -->

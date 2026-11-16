@@ -18,7 +18,7 @@ public class KittsCEventSystem : Plugin
     public override string Description { get; } = "";
     public override LoadPriority Priority { get; } = LoadPriority.Lowest;
 
-    public override Version Version { get; } = new Version(0, 1, 4);
+    public override Version Version { get; } = new Version(0, 1, 5);
     public override Version RequiredApiVersion { get; } = new Version(LabApiProperties.CompiledVersion);
 
     public static Config Config { get; set; }
